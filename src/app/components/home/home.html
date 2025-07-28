@@ -38,10 +38,21 @@
             </div>
 
             <div class="social-links" data-aos="fade-up" data-aos-delay="400">
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-github"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.facebook.com/share/1EmRZbAJHF/" class="facebook" target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/maxime-kpoghomou-67500528a/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+              </a>
+
+              <a href="https://github.com/MaximeKPOGHOMOU" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://wa.me/224661110288" class="whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -63,7 +74,7 @@
                 <span>Créativité</span>
               </div>
             </div>
-            <img src="assets/img/profile/profile-square-1.webp" alt="Portfolio Hero" class="img-fluid hero-main-image">
+            <img src="assets/img/profile/max.jpeg" alt="Portfolio Hero" class="img-fluid hero-main-image">
             <div class="image-overlay"></div>
           </div>
         </div>
@@ -90,10 +101,10 @@
         <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
           <div class="profile-image-wrapper">
             <div class="profile-image">
-              <img src="assets/img/profile/hero.png" alt="Profile" class="img-fluid">
+              <img src="assets/img/profile/max.jpeg" alt="Profile" class="img-fluid">
             </div>
             <div class="signature-section">
-              <img src="assets/img/misc/signature-1.webp" alt="Signature" class="signature">
+              <img src="assets/img/misc/signature.png" alt="Signature" class="signature">
               <p class="quote">Créer des expériences digitales porteuses de sens grâce à un code créatif.</p>
             </div>
           </div>
@@ -111,29 +122,16 @@
             </div>
 
             <div class="skills-grid">
-              <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+              <div class="skill-item" *ngFor="let skill of skills" [attr.data-aos]="'zoom-in'"
+                [attr.data-aos-delay]="skill.delay">
                 <div class="skill-icon">
-                  <i class="bi bi-palette"></i>
+                  <i [class]="skill.icon"></i>
                 </div>
-                <h4>Conception UI/UX</h4>
-                <p>Création d’interfaces intuitives et esthétiques, centrées sur l’utilisateur.</p>
-              </div>
-              <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
-                <div class="skill-icon">
-                  <i class="bi bi-code-slash"></i>
-                </div>
-                <h4>Développement Fullstack</h4>
-                <p>Conception complète d’applications web, du backend au frontend avec des technologies
-                  modernes.</p>
-              </div>
-              <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-                <div class="skill-icon">
-                  <i class="bi bi-phone"></i>
-                </div>
-                <h4>Développement Mobile</h4>
-                <p>Création d'applications mobiles performantes et adaptées aux besoins utilisateurs.</p>
+                <h4>{{ skill.title }}</h4>
+                <p>{{ skill.description }}</p>
               </div>
             </div>
+
 
             <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
               <div class="timeline-item">
@@ -329,7 +327,7 @@
               <h4>Certifications</h4>
               <div class="badge-list">
                 <div class="skill-badge">Expert Angular</div>
-                <div class="skill-badge">Expert Laravel</div>
+                <div class="skill-badge">Infographie</div>
                 <div class="skill-badge">Développeur Mobile</div>
                 <div class="skill-badge">Design UI/UX</div>
               </div>
@@ -361,76 +359,31 @@
               <h2><i class="bi bi-briefcase"></i> Parcours Professionnel</h2>
               <p class="section-subtitle">
                 De mes premières missions sur le terrain à mes stages en développement, chaque étape m’a permis de
-                renforcer
-                mes compétences techniques et humaines.
+                renforcer mes compétences techniques et humaines.
               </p>
             </div>
 
-
             <div class="experience-cards">
-              <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="experience-card" *ngFor="let exp of experiences" data-aos="zoom-in"
+                [attr.data-aos-delay]="exp.delay">
                 <div class="card-header">
                   <div class="role-info">
-                    <h3>Stagiaire Développeur Fullstack</h3>
-                    <h4>Magoe Technologie</h4>
+                    <h3>{{ exp.poste }}</h3>
+                    <h4>{{ exp.entreprise }}</h4>
                   </div>
-                  <span class="duration">2025-present</span>
+                  <span class="duration">{{ exp.date }}</span>
                 </div>
                 <div class="card-body">
-                  <p>Participation au développement d'applications web, avec intégration d'interfaces utilisateur et
-                    gestion
-                    de bases de données, dans un environnement agile et collaboratif.</p>
+                  <p>{{ exp.description }}</p>
                   <ul class="achievements">
-                    <li>Développement de fonctionnalités front-end en Angular</li>
-                    <li>Intégration d'API REST et gestion des requêtes côté back-end</li>
-                    <li>Collaboration avec des équipes techniques sur des projets clients réels</li>
+                    <li *ngFor="let item of exp.achievements">{{ item }}</li>
                   </ul>
                 </div>
               </div>
-
-              <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
-                <div class="card-header">
-                  <div class="role-info">
-                    <h3>Stagiaire – Installation de systèmes de vidéosurveillance</h3>
-                    <h4>THT (Touaro Haba Technologie)</h4>
-                  </div>
-                  <span class="duration">2023</span>
-                </div>
-                <div class="card-body">
-                  <p>Participation active à l'installation, la configuration et la maintenance de systèmes de
-                    vidéosurveillance chez des clients professionnels et particuliers.</p>
-                  <ul class="achievements">
-                    <li>Installation de caméras IP et analogiques</li>
-                    <li>Câblage, configuration DVR/NVR, et test de bon fonctionnement</li>
-                    <li>Intervention sur site avec rigueur et sens du service client</li>
-                  </ul>
-                </div>
-              </div>
-
-
-              <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
-                <div class="card-header">
-                  <div class="role-info">
-                    <h3>Agent Promoteur</h3>
-                    <h4>MTN Guinée</h4>
-                  </div>
-                  <span class="duration">2021</span>
-                </div>
-                <div class="card-body">
-                  <p>Responsable de la promotion des produits et services MTN auprès des clients, en assurant la
-                    visibilité
-                    de la marque et en renforçant la relation client sur le terrain.</p>
-                  <ul class="achievements">
-                    <li>Animation de points de vente et stands promotionnels</li>
-                    <li>Présentation des offres et assistance à la clientèle</li>
-                    <li>Participation aux campagnes de communication commerciale</li>
-                  </ul>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
+
 
         <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
           <div class="education-section">
@@ -445,51 +398,23 @@
             <div class="education-timeline">
               <div class="timeline-track"></div>
 
-              <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+              <div class="education-item" *ngFor="let edu of educations" data-aos="slide-up"
+                [attr.data-aos-delay]="edu.delay">
                 <div class="timeline-marker"></div>
-                <div class="education-content" data-aos="fade-up" data-aos-delay="300">
+                <div class="education-content" data-aos="fade-up" [attr.data-aos-delay]="edu.delay">
                   <div class="degree-header">
-                    <h3>Licence en Génie Informatique</h3>
-                    <span class="year">2021 - 2024</span>
+                    <h3>{{ edu.titre }}</h3>
+                    <span class="year">{{ edu.annee }}</span>
                   </div>
-                  <h4 class="institution">Institut Supérieur de Technologie de Mamou (IST-Mamou)</h4>
-                  <p>Formation axée sur le développement logiciel, les systèmes informatiques, les réseaux et les
-                    technologies embarquées, avec une forte dimension pratique à travers des projets et stages.</p>
-                </div>
-
-              </div>
-
-              <div class="education-item" data-aos="slide-up" data-aos-delay="400">
-                <div class="timeline-marker"></div>
-                <div class="education-content">
-                  <div class="degree-header">
-                    <h3>Baccalauréat – Sciences Mathématiques</h3>
-                    <span class="year">2021</span>
-                  </div>
-                  <h4 class="institution">Lycée Alpha Yaya DIALLO</h4>
-                  <p>Études secondaires axées sur les mathématiques, la physique et l’informatique, fournissant une
-                    base
-                    solide pour poursuivre des études en génie informatique.</p>
-                </div>
-              </div>
-
-
-              <div class="education-item" data-aos="slide-up" data-aos-delay="500">
-                <div class="timeline-marker"></div>
-                <div class="education-content">
-                  <div class="degree-header">
-                    <h3>Formation à l'École Normale d'Instituteur</h3>
-                    <span class="year">2019 - 2021</span>
-                  </div>
-                  <h4 class="institution">ENI de Nzérékoré</h4>
-                  <p>Programme de formation initiale pour devenir instituteur, avec un accent sur la pédagogie, la
-                    didactique et les sciences de l’éducation.</p>
+                  <h4 class="institution">{{ edu.etablissement }}</h4>
+                  <p>{{ edu.description }}</p>
                 </div>
               </div>
 
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -497,128 +422,36 @@
 
   <!-- Services Section -->
   <section id="services" class="services section">
-    <!-- Section Title -->
     <div class="container section-title">
       <h2>Services</h2>
       <p>Découvrez les compétences que je mets à votre service pour concrétiser vos projets web et technologiques.</p>
-    </div><!-- End Section Title -->
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row g-4">
-
-        <!-- Card 1 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item">
-            <div class="icon">
-              <i class="bi bi-code-slash"></i>
-            </div>
-            <h3>Développement Web & Mobile</h3>
-            <p>Création d’applications modernes, responsives et performantes avec Angular, Node.js, et technologies
-              associées.</p>
-            <div class="card-links">
-              <a href="#" class="link-item">
-                En savoir plus
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-        <!-- Card 2 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item">
-            <div class="icon">
-              <i class="bi bi-camera-video"></i>
-            </div>
-            <h3>Installation de systèmes de vidéosurveillance</h3>
-            <p>Configuration et maintenance de caméras IP et analogiques pour assurer la sécurité et la surveillance de
-              vos locaux.</p>
-            <div class="card-links">
-              <a href="#" class="link-item">
-                En savoir plus
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-        <!-- Card 3 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item">
-            <div class="icon">
-              <i class="bi bi-shield-lock"></i>
-            </div>
-            <h3>Sécurité informatique</h3>
-            <p>Mise en place de bonnes pratiques et solutions pour protéger vos données et garantir la confidentialité.
-            </p>
-            <div class="card-links">
-              <a href="#" class="link-item">
-                En savoir plus
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-        <!-- Card 4 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-item">
-            <div class="icon">
-              <i class="bi bi-cloud-upload"></i>
-            </div>
-            <h3>Hébergement et Cloud</h3>
-            <p>Assistance dans le déploiement, la gestion et la sécurisation de vos applications sur le cloud (Firebase,
-              OVH, etc.).</p>
-            <div class="card-links">
-              <a href="#" class="link-item">
-                En savoir plus
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-        <!-- Card 5 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-item">
-            <div class="icon">
-              <i class="bi bi-phone"></i>
-            </div>
-            <h3>Support et Maintenance</h3>
-            <p>Intervention rapide et efficace pour assurer le bon fonctionnement de vos systèmes informatiques et
-              applications.</p>
-            <div class="card-links">
-              <a href="#" class="link-item">
-                En savoir plus
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-        <!-- Card 6 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-item">
-            <div class="icon">
-              <i class="bi bi-music-note-beamed"></i>
-            </div>
-            <h3>Passion & Inspiration</h3>
-            <p>Un développeur inspiré par la musique, garantissant créativité et rigueur dans chaque projet.</p>
-            <div class="card-links">
-              <a href="#" class="link-item">
-                En savoir plus
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
-
-      </div>
-
     </div>
 
-  </section><!-- /Services Section -->
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" *ngFor="let service of services; let i = index"
+          [attr.data-aos-delay]="service.delay" data-aos="fade-up">
+          <div class="service-item">
+            <div class="icon">
+              <i [class]="service.icon"></i>
+            </div>
+            <h3>{{ service.title }}</h3>
+            <p>
+              {{ service.expanded ? service.description : (service.description | slice:0:100) + '...' }}
+            </p>
+            <div class="card-links">
+              <a href="#" class="link-item" (click)="toggleDescription(i, $event)">
+                {{ service.expanded ? 'Lire moins' : 'Lire plus' }}
+                <i class="bi" [ngClass]="service.expanded ? 'bi-arrow-up' : 'bi-arrow-down'"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- /Services Section -->
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio section">
@@ -645,27 +478,29 @@
           <li data-filter=".filter-marketing">
             Marketing
           </li>
+          <li data-filter=".filter-infographie">
+            Infographie
+          </li>
         </ul>
 
         <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
 
-          <!-- Projet UI/UX -->
-          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item" *ngFor="let projet of projets"
+            [ngClass]="projet.categorie">
             <article class="portfolio-entry">
               <figure class="entry-image">
-                <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="Application mobile bancaire"
-                  loading="lazy">
+                <img [src]="projet.image" class="img-fluid" [alt]="projet.titre" loading="lazy" />
                 <div class="entry-overlay">
                   <div class="overlay-content">
-                    <div class="entry-meta">UI/UX Design</div>
-                    <h3 class="entry-title">Application mobile bancaire</h3>
+                    <div class="entry-meta">{{ projet.meta }}</div>
+                    <h3 class="entry-title">{{ projet.titre }}</h3>
                     <div class="entry-links">
-                      <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox"
-                        data-gallery="portfolio-gallery-ui"
-                        data-glightbox="title: Application mobile bancaire; description: Design intuitif et ergonomique pour faciliter les opérations bancaires.">
+                      <a [href]="projet.image" class="glightbox" data-glightbox
+                        [attr.data-gallery]="projet.lightboxGallery"
+                        [attr.data-glightbox]="'title: ' + projet.titre + '; description: ' + projet.description">
                         <i class="bi bi-arrows-angle-expand"></i>
                       </a>
-                      <a href="portfolio-details.html">
+                      <a [href]="projet.lienDetails">
                         <i class="bi bi-arrow-right"></i>
                       </a>
                     </div>
@@ -673,62 +508,10 @@
                 </div>
               </figure>
             </article>
-          </div><!-- End Portfolio Item -->
+          </div>
 
-          <!-- Projet Développement -->
-          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-            <article class="portfolio-entry">
-              <figure class="entry-image">
-                <img src="assets/img/portfolio/mamou.png" class="img-fluid" alt="Plateforme e-learning" loading="lazy">
-                <div class="entry-overlay">
-                  <div class="overlay-content">
-                    <div class="entry-meta">Développement</div>
-                    <h3 class="entry-title">Plateforme de centralisation de dossier scolaire</h3>
-                    <div class="entry-links">
-                      <a href="assets/img/portfolio/mamou.png" class="glightbox"
-                        data-gallery="portfolio-gallery-development"
-                        data-glightbox="title: Plateforme e-learning; description: Système complet pour l’apprentissage en ligne, multi-utilisateurs.">
-                        <i class="bi bi-arrows-angle-expand"></i>
-                      </a>
-                      <a href="portfolio-details.html">
-                        <i class="bi bi-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </figure>
-            </article>
-          </div><!-- End Portfolio Item -->
+        </div>
 
-          <!-- Projet Marketing -->
-          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-            <article class="portfolio-entry">
-              <figure class="entry-image">
-                <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="Campagne réseaux sociaux"
-                  loading="lazy">
-                <div class="entry-overlay">
-                  <div class="overlay-content">
-                    <div class="entry-meta">Marketing</div>
-                    <h3 class="entry-title">Campagne réseaux sociaux</h3>
-                    <div class="entry-links">
-                      <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox"
-                        data-gallery="portfolio-gallery-marketing"
-                        data-glightbox="title: Campagne réseaux sociaux; description: Stratégie de communication digitale et gestion des réseaux sociaux.">
-                        <i class="bi bi-arrows-angle-expand"></i>
-                      </a>
-                      <a href="portfolio-details.html">
-                        <i class="bi bi-arrow-right"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </figure>
-            </article>
-          </div><!-- End Portfolio Item -->
-
-          <!-- Plus de projets... -->
-
-        </div><!-- End Portfolio Container -->
 
       </div>
 
