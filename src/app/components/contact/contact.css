@@ -1,0 +1,5 @@
+#toastProgressBar {
+  width: 100%;
+  transition: width 3s linear;
+  transform-origin: right;
+}

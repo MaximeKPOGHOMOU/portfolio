@@ -52,37 +52,52 @@
                 <h3>Contactez-moi</h3>
                 <p>Merci de remplir le formulaire ci-dessous, je vous répondrai dans les plus brefs délais.</p>
 
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                    data-aos-delay="200">
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="row gy-4">
-
                         <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                            <input type="text" name="name" [(ngModel)]="form.name" class="form-control"
+                                placeholder="Votre nom" required />
                         </div>
-
                         <div class="col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+                            <input type="email" name="email" [(ngModel)]="form.email" class="form-control"
+                                placeholder="Votre email" required />
                         </div>
-
                         <div class="col-12">
-                            <input type="text" name="subject" class="form-control" placeholder="Sujet" required>
+                            <input type="text" name="subject" [(ngModel)]="form.subject" class="form-control"
+                                placeholder="Sujet" required />
                         </div>
-
                         <div class="col-12">
-                            <textarea name="message" rows="6" class="form-control" placeholder="Votre message"
-                                required></textarea>
+                            <textarea name="message" [(ngModel)]="form.message" rows="6" class="form-control"
+                                placeholder="Votre message" required></textarea>
                         </div>
-
                         <div class="col-12 text-center">
-                            <div class="loading">Envoi en cours...</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Votre message a bien été envoyé. Merci !</div>
-
-                            <button type="submit" class="btn">Envoyer</button>
+                            <button type="submit" class="btn btn-primary" [disabled]="loading">
+                                {{ loading ? 'Envoi en cours...' : 'Envoyer' }}
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm ms-2" role="status"
+                                    aria-hidden="true"></span>
+                            </button>
                         </div>
-
                     </div>
                 </form>
+
+                <!-- Toast Bootstrap -->
+                <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 2000;">
+                    <div id="formToast" class="toast align-items-center text-white bg-success border-0"
+                        data-bs-autohide="true" data-bs-delay="3000" role="alert" aria-live="assertive"
+                        aria-atomic="true" style="min-width: 300px;">
+                        <div class="d-flex">
+                            <div class="toast-body">
+                                Message envoyé avec succès
+                            </div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                                aria-label="Fermer"></button>
+                        </div>
+                        <div class="progress toast-progress" style="height: 3px;">
+                            <div class="progress-bar bg-primary" id="toastProgressBar" role="progressbar"></div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>

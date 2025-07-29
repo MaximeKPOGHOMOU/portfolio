@@ -14,6 +14,7 @@ declare var Typed: any;
 })
 export class Home implements AfterViewInit {
 
+
   projets = [
     {
       titre: 'Application mobile e-learning',
