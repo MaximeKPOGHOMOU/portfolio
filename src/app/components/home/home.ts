@@ -243,15 +243,9 @@ export class Home implements AfterViewInit {
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
 
-visibleCount = 4; 
-toutAffiche = false;
+toutAffiche: boolean = false;
 
 voirPlusOuMoins() {
-  if (this.toutAffiche) {
-    this.visibleCount = 4; 
-  } else {
-    this.visibleCount = this.projets.length;
-  }
   this.toutAffiche = !this.toutAffiche;
 }
 
