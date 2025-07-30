@@ -166,7 +166,7 @@
               </div>
               <div class="action-buttons">
                 <a href="#portfolio" class="btn btn-primary">Voir mes projets</a>
-                <a href="assets/doc/CV_Maxime_KPOGHOMOU.pdf" class="btn btn-outline">Télécharger CV</a>
+                <a href="assets/doc/CV_Maxime_KPOGHOMOU.pdf" class="btn btn-outline">Télécharger mon CV</a>
               </div>
             </div>
 
@@ -238,7 +238,7 @@
                 <div class="skill-card">
                   <div class="skill-header">
                     <i class="bi bi-phone"></i>
-                    <h3>Développement Mobile</h3>
+                    <h3>Développement  Mobile</h3>
                   </div>
                   <div class="skills-animation">
                     <div class="skill-item" *ngFor="let skill of mobileSkills">
@@ -483,46 +483,36 @@
         </ul>
 
         <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-          <ng-container *ngFor="let projet of projets; let i = index">
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item" *ngIf="toutAffiche || i < 4"
-              [ngClass]="projet.categorie">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img [src]="projet.image" class="img-fluid" [alt]="projet.titre" loading="lazy" />
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">{{ projet.meta }}</div>
-                      <h3 class="entry-title">{{ projet.titre }}</h3>
-                      <div class="entry-links">
-                        <a [href]="projet.image" class="glightbox" data-glightbox
-                          [attr.data-gallery]="projet.lightboxGallery"
-                          [attr.data-glightbox]="'title: ' + projet.titre + '; description: ' + projet.description">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a [href]="projet.lienDetails">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item" *ngFor="let projet of projets"
+            [ngClass]="projet.categorie">
+            <article class="portfolio-entry">
+              <figure class="entry-image">
+                <img [src]="projet.image" class="img-fluid" [alt]="projet.titre" loading="lazy" />
+                <div class="entry-overlay">
+                  <div class="overlay-content">
+                    <div class="entry-meta">{{ projet.meta }}</div>
+                    <h3 class="entry-title">{{ projet.titre }}</h3>
+                    <div class="entry-links">
+                      <a [href]="projet.image" class="glightbox" data-glightbox
+                        [attr.data-gallery]="projet.lightboxGallery"
+                        [attr.data-glightbox]="'title: ' + projet.titre + '; description: ' + projet.description">
+                        <i class="bi bi-arrows-angle-expand"></i>
+                      </a>
+                      <a [href]="projet.lienDetails">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
                     </div>
                   </div>
-                </figure>
-              </article>
-            </div>
-          </ng-container>
+                </div>
+              </figure>
+            </article>
+          </div>
+
         </div>
 
 
-
       </div>
-
-      <div class="text-center mt-4" *ngIf="projets.length > 4">
-        <button class="btn btn-outline-primary rounded-pill voir-btn" (click)="voirPlusOuMoins()">
-          {{ toutAffiche ? 'Voir moins' : 'Voir plus' }}
-        </button>
-      </div>
-
-
-
 
     </div>
 

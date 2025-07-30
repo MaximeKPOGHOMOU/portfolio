@@ -242,13 +242,7 @@ export class Home implements AfterViewInit {
     { name: 'React Native', percentage: 70 },
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
-
-toutAffiche: boolean = false;
-
-voirPlusOuMoins() {
-  this.toutAffiche = !this.toutAffiche;
-}
-
+  
 
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
 
