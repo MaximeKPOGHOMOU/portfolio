@@ -171,19 +171,27 @@ export class Home implements AfterViewInit {
       delay: 300
     },
     {
-      titre: 'Baccalauréat – Sciences Mathématiques',
-      annee: '2021',
-      etablissement: 'Lycée Alpha Yaya DIALLO',
-      description: `Études secondaires axées sur les mathématiques, la physique et l’informatique, fournissant une base solide pour poursuivre des études en génie informatique.`,
-      delay: 400
-    },
+      titre: `Formation en Développement Mobile Android & iOS`,
+      annee: 'Juillet 2024',
+      etablissement: `Orange Digital Center`,
+      description: `Programme axé sur le développement d'applications mobiles Android et iOS, utilisant des technologies comme Flutter et Kotlin, avec une approche projet pratique.`,
+      delay: 600
+    }
+    ,
     {
       titre: `Formation à l'École Normale d'Instituteur`,
       annee: '2019 - 2021',
       etablissement: `ENI de Nzérékoré`,
       description: `Programme de formation initiale pour devenir instituteur, avec un accent sur la pédagogie, la didactique et les sciences de l’éducation.`,
       delay: 500
-    }
+    },
+    {
+      titre: 'Baccalauréat – Sciences Mathématiques',
+      annee: '2021',
+      etablissement: 'Lycée Alpha Yaya DIALLO',
+      description: `Études secondaires axées sur les mathématiques, la physique et l’informatique, fournissant une base solide pour poursuivre des études en génie informatique.`,
+      delay: 400
+    },
   ];
 
   skills = [
@@ -234,6 +242,19 @@ export class Home implements AfterViewInit {
     { name: 'React Native', percentage: 70 },
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
+
+visibleCount = 4; 
+toutAffiche = false;
+
+voirPlusOuMoins() {
+  if (this.toutAffiche) {
+    this.visibleCount = 4; 
+  } else {
+    this.visibleCount = this.projets.length;
+  }
+  this.toutAffiche = !this.toutAffiche;
+}
+
 
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
 

@@ -238,7 +238,7 @@
                 <div class="skill-card">
                   <div class="skill-header">
                     <i class="bi bi-phone"></i>
-                    <h3>Développement  Mobile</h3>
+                    <h3>Développement Mobile</h3>
                   </div>
                   <div class="skills-animation">
                     <div class="skill-item" *ngFor="let skill of mobileSkills">
@@ -484,8 +484,8 @@
 
         <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
 
-          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item" *ngFor="let projet of projets"
-            [ngClass]="projet.categorie">
+          <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item"
+            *ngFor="let projet of projets.slice(0, visibleCount)" [ngClass]="projet.categorie">
             <article class="portfolio-entry">
               <figure class="entry-image">
                 <img [src]="projet.image" class="img-fluid" [alt]="projet.titre" loading="lazy" />
@@ -513,6 +513,14 @@
 
 
       </div>
+
+      <div class="text-center mt-4" *ngIf="projets.length > 4">
+  <button class="btn btn-outline-primary rounded-pill voir-btn" (click)="voirPlusOuMoins()">
+    {{ toutAffiche ? 'Voir moins' : 'Voir plus' }}
+  </button>
+</div>
+
+
 
     </div>
 
