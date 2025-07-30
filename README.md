@@ -11,7 +11,7 @@ Il présente mes projets, mon parcours académique et mes expériences.
 ![Accueil](screenshots/accueil.png)
 
 ### 📂 Section Projets
-![Projets](screenshots/projets.png)
+![Projets](screenshots/projet.png)
 
 ### 📬 Page Contact
 ![Contact](screenshots/contact.png)
