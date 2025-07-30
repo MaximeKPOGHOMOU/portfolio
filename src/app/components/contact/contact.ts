@@ -48,22 +48,22 @@ export class Contact implements OnInit {
       !this.form.subject.trim() ||
       !this.form.message.trim()
     ) {
-      this.showToast("Veuillez remplir tous les champs");
+      this.showToast("Veuillez remplir tous les champs", 'error');
       return;
     }
 
     if (!this.isValidEmail(this.form.email)) {
-      this.showToast("Adresse email invalide");
+      this.showToast("Adresse email invalide", 'error');
       return;
     }
 
     this.loading = true;
 
     const formData = new FormData();
-    formData.append('Nom complet', this.form.name);
-    formData.append('Email', this.form.email);
-    formData.append('Sujet', this.form.subject);
-    formData.append('Message', this.form.message);
+    formData.append('name', this.form.name);
+    formData.append('email', this.form.email);
+    formData.append('suject', this.form.subject);
+    formData.append('message', this.form.message);
 
     fetch('https://formsubmit.co/ajax/maximekpoghomou18@gmail.com', {
       method: 'POST',

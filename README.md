@@ -1,59 +1,40 @@
-# Portfolio
+# 💼 Portfolio - Maxime Kpoghomou
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Bienvenue sur mon portfolio en ligne, développé avec Angular.  
+Il présente mes projets, mon parcours académique et mes expériences.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📸 Aperçu du portfolio
 
-```bash
-ng serve
-```
+### 🏠 Page d'accueil
+![Accueil](screenshots/accueil.png)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 📂 Section Projets
+![Projets](screenshots/projets.png)
 
-## Code scaffolding
+### 📬 Page Contact
+![Contact](screenshots/contact.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## ⚙️ Technologies utilisées
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Angular
+- TypeScript
+- Bootstrap
+- Firebase (pour l'hébergement)
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🚀 Démo en ligne
 
-To build the project run:
+🔗 [Voir le portfolio en ligne](https://magoe-176b4.web.app/)
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📫 Contact
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pour en savoir plus, contactez-moi :  
+maximekpoghomou18@example.com
++224 625 19 24 18/ +224 626 91 22 40

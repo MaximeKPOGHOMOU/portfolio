@@ -191,7 +191,7 @@
                 <div class="skill-card">
                   <div class="skill-header">
                     <i class="bi bi-code-slash"></i>
-                    <h3>Frontend Development</h3>
+                    <h3>Développement Frontend</h3>
                   </div>
                   <div class="skills-animation">
                     <div class="skill-item" *ngFor="let skill of frontendSkills">
@@ -215,10 +215,33 @@
                 <div class="skill-card">
                   <div class="skill-header">
                     <i class="bi bi-server"></i>
-                    <h3>Backend Development</h3>
+                    <h3>Développement Backend</h3>
                   </div>
                   <div class="skills-animation">
                     <div class="skill-item" *ngFor="let skill of backendSkills">
+                      <div class="skill-info">
+                        <span class="skill-name">{{ skill.name }}</span>
+                        <span class="skill-percentage">{{ skill.percentage }}%</span>
+                      </div>
+                      <div class="skill-bar progress">
+                        <div #progressBar class="progress-bar" role="progressbar"
+                          [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100"
+                          [attr.data-value]="skill.percentage" style="width: 0%">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <i class="bi bi-phone"></i>
+                    <h3>Développement  Mobile</h3>
+                  </div>
+                  <div class="skills-animation">
+                    <div class="skill-item" *ngFor="let skill of mobileSkills">
                       <div class="skill-info">
                         <span class="skill-name">{{ skill.name }}</span>
                         <span class="skill-percentage">{{ skill.percentage }}%</span>
@@ -242,30 +265,6 @@
                   </div>
                   <div class="skills-animation">
                     <div class="skill-item" *ngFor="let skill of designSkills">
-                      <div class="skill-info">
-                        <span class="skill-name">{{ skill.name }}</span>
-                        <span class="skill-percentage">{{ skill.percentage }}%</span>
-                      </div>
-                      <div class="skill-bar progress">
-                        <div #progressBar class="progress-bar" role="progressbar"
-                          [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100"
-                          [attr.data-value]="skill.percentage" style="width: 0%">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-md-6">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <i class="bi bi-cloud"></i>
-                    <h3>Cloud &amp; DevOps</h3>
-                  </div>
-                  <div class="skills-animation">
-                    <div class="skill-item" *ngFor="let skill of cloudSkills">
                       <div class="skill-info">
                         <span class="skill-name">{{ skill.name }}</span>
                         <span class="skill-percentage">{{ skill.percentage }}%</span>

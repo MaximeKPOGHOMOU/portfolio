@@ -35,6 +35,26 @@ export class Home implements AfterViewInit {
       lienDetails: 'portfolio-details.html'
     },
     {
+      titre: 'Mini site personnel pour portfolio',
+      image: 'assets/img/portfolio/self.png',
+      categorie: 'filter-development',
+      description: 'Site vitrine développé pour présenter mes projets, compétences et expériences professionnelles de manière interactive et responsive.',
+      meta: 'Développement Web',
+      lightboxGallery: 'portfolio-gallery-development',
+      lienDetails: 'portfolio-details.html'
+    },
+
+    {
+      titre: 'Application mobile de gestion locative',
+      image: 'assets/img/portfolio/flutter.png',
+      categorie: 'filter-development',
+      description: 'Application mobile développée avec Flutter pour la gestion des logements : enregistrement des biens, gestion des locataires, paiements, et notifications.',
+      meta: 'Développement Mobile',
+      lightboxGallery: 'portfolio-gallery-development',
+      lienDetails: 'portfolio-details.html'
+    },
+
+    {
       titre: 'Campagne réseaux sociaux',
       image: 'assets/img/portfolio/marketing_1.jpeg',
       categorie: 'filter-marketing',
@@ -179,8 +199,6 @@ export class Home implements AfterViewInit {
 
 
 
-
-
   frontendSkills = [
     { name: 'HTML/CSS', percentage: 95 },
     { name: 'JavaScript', percentage: 88 },
@@ -201,6 +219,12 @@ export class Home implements AfterViewInit {
     { name: 'Docker', percentage: 73 },
     { name: 'Git', percentage: 90 }
   ];
+  mobileSkills = [
+    { name: 'Flutter', percentage: 90 },
+    { name: 'React Native', percentage: 70 },
+    { name: 'Android (Java/Kotlin)', percentage: 65 },
+  ];
+
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
 
 
