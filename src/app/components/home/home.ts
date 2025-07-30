@@ -23,7 +23,7 @@ export class Home implements AfterViewInit {
       description: 'Design intuitif et ergonomique pour des cours en ligne.',
       meta: 'UI/UX Design',
       lightboxGallery: 'portfolio-gallery-ui',
-      lienDetails: 'portfolio-details.html'
+      lienDetails: '#'
     },
     {
       titre: 'Plateforme de centralisation de dossier scolaire',
@@ -32,7 +32,7 @@ export class Home implements AfterViewInit {
       description: 'Système complet pour la gestion scolaire.',
       meta: 'Développement',
       lightboxGallery: 'portfolio-gallery-development',
-      lienDetails: 'portfolio-details.html'
+      lienDetails: 'https://mamouedu.galyimmo.com/'
     },
     {
       titre: 'Mini site personnel pour portfolio',
@@ -41,7 +41,7 @@ export class Home implements AfterViewInit {
       description: 'Site vitrine développé pour présenter mes projets, compétences et expériences professionnelles de manière interactive et responsive.',
       meta: 'Développement Web',
       lightboxGallery: 'portfolio-gallery-development',
-      lienDetails: 'portfolio-details.html'
+      lienDetails: '#'
     },
 
     {
@@ -51,8 +51,18 @@ export class Home implements AfterViewInit {
       description: 'Application mobile développée avec Flutter pour la gestion des logements : enregistrement des biens, gestion des locataires, paiements, et notifications.',
       meta: 'Développement Mobile',
       lightboxGallery: 'portfolio-gallery-development',
-      lienDetails: 'portfolio-details.html'
+      lienDetails: '#'
     },
+    {
+      titre: 'Application mobile de gestion des codes USSD',
+      image: 'assets/img/portfolio/code.png',
+      categorie: 'filter-development',
+      description: 'Application mobile développée avec Flutter pour faciliter la gestion des codes USSD en Guinée.',
+      meta: 'Développement Mobile',
+      lightboxGallery: 'portfolio-gallery-development',
+      lienDetails: 'https://github.com/MaximeKPOGHOMOU/Code-ussd'
+    },
+
 
     {
       titre: 'Campagne réseaux sociaux',
@@ -61,7 +71,7 @@ export class Home implements AfterViewInit {
       description: 'Stratégie de communication digitale.',
       meta: 'Marketing',
       lightboxGallery: 'portfolio-gallery-marketing',
-      lienDetails: 'portfolio-details.html'
+      lienDetails: '#'
     },
     {
       titre: 'Affiche publicitaire',
@@ -70,7 +80,7 @@ export class Home implements AfterViewInit {
       description: 'Conception visuelle professionnelle.',
       meta: 'Infographie',
       lightboxGallery: 'portfolio-gallery-infographie',
-      lienDetails: 'portfolio-details.html'
+      lienDetails: '#'
     }
   ];
 
