@@ -62,6 +62,15 @@ export class Home implements AfterViewInit {
       lightboxGallery: 'portfolio-gallery-development',
       lienDetails: 'https://github.com/MaximeKPOGHOMOU/Code-ussd'
     },
+    {
+      titre: 'Application mobile pour lister les pays du monde',
+      image: 'assets/img/portfolio/capital.png',
+      categorie: 'filter-development',
+      description: 'Application mobile développée avec Flutter pour affichez les pays du monde en utilisant les api.',
+      meta: 'Développement Mobile',
+      lightboxGallery: 'portfolio-gallery-development',
+      lienDetails: 'https://github.com/MaximeKPOGHOMOU/api-rest-pays-du-monde'
+    },
 
 
     {
