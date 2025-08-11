@@ -29,7 +29,7 @@ Il présente mes projets, mon parcours académique et mes expériences.
 
 ## 🚀 Démo en ligne
 
-🔗 [Voir le portfolio en ligne](https://magoe-176b4.web.app/)
+🔗 [Voir le portfolio en ligne](https://maximekpoghomou.netlify.app)
 
 ---
 
