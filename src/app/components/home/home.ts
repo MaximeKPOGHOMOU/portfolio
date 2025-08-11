@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID, ViewChildren, QueryList, ElementRef } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-
+import { Contact } from '../contact/contact';
 
 declare var PureCounter: any;
 declare var AOS: any;
@@ -13,24 +13,6 @@ declare var Typed: any;
   styleUrls: ['./home.css']
 })
 export class Home implements AfterViewInit {
-
-  showAll = false;
-  isotopeInstance!: Isotope;
-
-  get projetsToDisplay() {
-    return this.showAll ? this.projets : this.projets.slice(0, 4);
-  }
-
-
-  toggleShowAll() {
-    this.showAll = !this.showAll;
-
-    setTimeout(() => {
-      this.isotopeInstance.reloadItems();
-      this.isotopeInstance.arrange({});
-    }, 100);
-  }
-
 
 
   projets = [
@@ -269,7 +251,7 @@ export class Home implements AfterViewInit {
     { name: 'React Native', percentage: 70 },
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
-
+  
 
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
 
@@ -285,15 +267,7 @@ export class Home implements AfterViewInit {
 
   async ngAfterViewInit(): Promise<void> {
 
-
     if (isPlatformBrowser(this.platformId)) {
-      const Isotope = (await import('isotope-layout')).default;
-
-      this.isotopeInstance = new Isotope('.isotope-container', {
-        itemSelector: '.isotope-item',
-        layoutMode: 'masonry',
-        percentPosition: true
-      });
       new Typed('.typed', {
         strings: ['Designer', 'Developer', 'Freelancer', 'Artist'],
         typeSpeed: 100,
@@ -308,17 +282,6 @@ export class Home implements AfterViewInit {
 
       new PureCounter();
 
-      // Gestion des filtres
-      const filters = document.querySelectorAll('.portfolio-filters li');
-      filters.forEach(filter => {
-        filter.addEventListener('click', () => {
-          const filterValue = filter.getAttribute('data-filter')!;
-          this.isotopeInstance.arrange({ filter: filterValue });
-
-          filters.forEach(f => f.classList.remove('filter-active'));
-          filter.classList.add('filter-active');
-        });
-      });
       //  Déplacer le code de IntersectionObserver ici
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -333,15 +296,14 @@ export class Home implements AfterViewInit {
       }, {
         threshold: 0.3
       });
+
       this.progressBars.forEach(bar => {
         observer.observe(bar.nativeElement);
       });
     }
-
-
   }
-}
 
+}
 
 
 
