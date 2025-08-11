@@ -23,7 +23,7 @@ Il présente mes projets, mon parcours académique et mes expériences.
 - Angular
 - TypeScript
 - Bootstrap
-- Firebase (pour l'hébergement)
+- Netlify (pour l'hébergement)
 
 ---
 
@@ -36,5 +36,5 @@ Il présente mes projets, mon parcours académique et mes expériences.
 ## 📫 Contact
 
 Pour en savoir plus, contactez-moi :  
-maximekpoghomou18@example.com
-+224 625 19 24 18/ +224 626 91 22 40
+Email:maximekpoghomou18@example.com
+Telephone: +224 625 19 24 18/ +224 626 91 22 40

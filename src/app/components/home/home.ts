@@ -141,7 +141,7 @@ export class Home implements AfterViewInit {
       poste: 'Stagiaire Développeur Fullstack',
       entreprise: 'Magoe Technologie',
       date: 'Juin - présent',
-      description: `Participation au développement d'applications web, avec intégration d'interfaces utilisateur et gestion de bases de données, dans un environnement agile et collaboratif.`,
+      description: 'Participation au développement d\'applications web, avec intégration d\'interfaces utilisateur et gestion de bases de données, dans un environnement agile et collaboratif.',
       achievements: [
         'Développement de fonctionnalités front-end en Angular',
         'Intégration d\'API REST et gestion des requêtes côté back-end',
@@ -153,7 +153,7 @@ export class Home implements AfterViewInit {
       poste: 'Stagiaire – Installation de systèmes de vidéosurveillance',
       entreprise: 'THT (Touaro Haba Technologie)',
       date: 'Juin - Oct 2023',
-      description: `Participation active à l'installation, la configuration et la maintenance de systèmes de vidéosurveillance chez des clients professionnels et particuliers.`,
+      description: 'Participation active à l\'installation, la configuration et la maintenance de systèmes de vidéosurveillance chez des clients professionnels et particuliers.',
       achievements: [
         'Installation de caméras IP et analogiques',
         'Câblage, configuration DVR/NVR, et test de bon fonctionnement',
@@ -165,7 +165,7 @@ export class Home implements AfterViewInit {
       poste: 'Agent Promoteur',
       entreprise: 'MTN Guinée',
       date: '2021 - 2025',
-      description: `Responsable de la promotion des produits et services MTN auprès des clients, en assurant la visibilité de la marque et en renforçant la relation client sur le terrain.`,
+      description: 'Responsable de la promotion des produits et services MTN auprès des clients, en assurant la visibilité de la marque et en renforçant la relation client sur le terrain.',
       delay: 500
     }
   ];
@@ -176,29 +176,29 @@ export class Home implements AfterViewInit {
       titre: 'Licence en Génie Informatique',
       annee: '2021 - 2025',
       etablissement: 'Institut Supérieur de Technologie de Mamou (IST-Mamou)',
-      description: `Formation axée sur le développement logiciel, les systèmes informatiques, les réseaux et les technologies embarquées, avec une forte dimension pratique à travers des projets et stages.`,
+      description: 'Formation axée sur le développement logiciel, les systèmes informatiques, les réseaux et les technologies embarquées, avec une forte dimension pratique à travers des projets et stages.',
       delay: 300
     },
     {
-      titre: `Formation en Développement Mobile Android & iOS`,
+      titre: 'Formation en Développement Mobile Android & iOS',
       annee: 'Juillet 2024',
-      etablissement: `Orange Digital Center`,
-      description: `Programme axé sur le développement d'applications mobiles Android et iOS, utilisant des technologies comme Flutter et Kotlin, avec une approche projet pratique.`,
+      etablissement: 'Orange Digital Center',
+      description: 'Programme axé sur le développement d\'applications mobiles Android et iOS, utilisant des technologies comme Flutter et Kotlin, avec une approche projet pratique.',
       delay: 600
     }
     ,
     {
-      titre: `Formation à l'École Normale d'Instituteur`,
+      titre: 'Formation à l\'École Normale d\'Instituteur',
       annee: '2019 - 2021',
-      etablissement: `ENI de Nzérékoré`,
-      description: `Programme de formation initiale pour devenir instituteur, avec un accent sur la pédagogie, la didactique et les sciences de l’éducation.`,
+      etablissement: 'ENI de Nzérékoré',
+      description: 'Programme de formation initiale pour devenir instituteur, avec un accent sur la pédagogie, la didactique et les sciences de l’éducation.',
       delay: 500
     },
     {
       titre: 'Baccalauréat – Sciences Mathématiques',
       annee: '2021',
       etablissement: 'Lycée Alpha Yaya DIALLO',
-      description: `Études secondaires axées sur les mathématiques, la physique et l’informatique, fournissant une base solide pour poursuivre des études en génie informatique.`,
+      description: 'Études secondaires axées sur les mathématiques, la physique et l’informatique, fournissant une base solide pour poursuivre des études en génie informatique.',
       delay: 400
     },
   ];

@@ -40,7 +40,7 @@
                         <i class="bi bi-envelope"></i>
                     </div>
                     <div class="content">
-                        <h4>Email Address</h4>
+                        <h4>Email</h4>
                         <p>maximekpoghomou18&#64;gmail.com</p>
                     </div>
                 </div>
@@ -56,11 +56,11 @@
                     <div class="row gy-4">
                         <div class="col-md-6">
                             <input type="text" name="name" [(ngModel)]="form.name" class="form-control"
-                                placeholder="Votre nom" required />
+                                placeholder="Nom complet" required />
                         </div>
                         <div class="col-md-6">
                             <input type="email" name="email" [(ngModel)]="form.email" class="form-control"
-                                placeholder="Votre email" required />
+                                placeholder="Email" required />
                         </div>
                         <div class="col-12">
                             <input type="text" name="subject" [(ngModel)]="form.subject" class="form-control"
@@ -68,13 +68,13 @@
                         </div>
                         <div class="col-12">
                             <textarea name="message" [(ngModel)]="form.message" rows="6" class="form-control"
-                                placeholder="Votre message" required></textarea>
+                                placeholder="Message" required></textarea>
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary" [disabled]="loading">
-                                {{ loading ? 'Envoi en cours...' : 'Envoyer' }}
                                 <span *ngIf="loading" class="spinner-border spinner-border-sm ms-2" role="status"
                                     aria-hidden="true"></span>
+                                {{ loading ? 'Envoi en cours...' : 'Envoyer' }}
                             </button>
                         </div>
                     </div>
