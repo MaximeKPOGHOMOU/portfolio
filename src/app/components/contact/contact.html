@@ -1,3 +1,6 @@
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section light-background">
 <!-- Titre de la section -->
 <div class="container section-title">
     <h2>Contact</h2>
@@ -56,11 +59,11 @@
                     <div class="row gy-4">
                         <div class="col-md-6">
                             <input type="text" name="name" [(ngModel)]="form.name" class="form-control"
-                                placeholder="Nom complet" required />
+                                placeholder="Votre nom complet" required />
                         </div>
                         <div class="col-md-6">
                             <input type="email" name="email" [(ngModel)]="form.email" class="form-control"
-                                placeholder="Email" required />
+                                placeholder="Votre email" required />
                         </div>
                         <div class="col-12">
                             <input type="text" name="subject" [(ngModel)]="form.subject" class="form-control"
@@ -68,7 +71,7 @@
                         </div>
                         <div class="col-12">
                             <textarea name="message" [(ngModel)]="form.message" rows="6" class="form-control"
-                                placeholder="Message" required></textarea>
+                                placeholder="votre message" required></textarea>
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-primary" [disabled]="loading">
@@ -105,3 +108,5 @@
     </div>
 
 </div>
+
+  </section><!-- /Contact Section -->

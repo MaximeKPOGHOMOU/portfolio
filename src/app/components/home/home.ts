@@ -6,16 +6,28 @@ declare var PureCounter: any;
 declare var AOS: any;
 declare var Typed: any;
 
+//=========L'interface pour les projet============
+interface Projet {
+  titre: string;
+  image: string;
+  categorie: string;
+  description: string;
+  meta: string;
+  lightboxGallery: string;
+  lienDetails: string;
+}
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
-  imports: [CommonModule, Contact,],
+  imports: [CommonModule],
   styleUrls: ['./home.css']
 })
 export class Home implements AfterViewInit {
 
-
-  projets = [
+//======== Les projets=============
+  projets: Projet[] = [
     {
       titre: 'Application mobile e-learning',
       image: 'assets/img/portfolio/ui_1.jpeg',
@@ -92,6 +104,36 @@ export class Home implements AfterViewInit {
       lienDetails: '#'
     }
   ];
+
+  // =======FILTRE=======
+  filtreActif: string = '*';  // '*' = tous les projets
+
+  // =======AFFICHAGE=========
+  afficherTout: boolean = false;
+
+  // ========Retourne les projets selon le filtre actif=========
+  get projetsFiltres(): Projet[] {
+    if (this.filtreActif === '*') {
+      return this.projets;
+    }
+    return this.projets.filter(p => p.categorie === this.filtreActif);
+  }
+
+  // ======Retourne les projets à afficher : soit tout, soit les 4 premiers==========
+  get projetsAffiches(): Projet[] {
+    return this.afficherTout ? this.projetsFiltres : this.projetsFiltres.slice(0, 4);
+  }
+
+  // =======Change le filtre et reset l'affichage "Afficher plus" ========
+  changerFiltre(filtre: string) {
+    this.filtreActif = filtre;
+    this.afficherTout = false;
+  }
+
+  // ======Toggle affichage "Afficher plus / moins"==========
+  toggleAfficher() {
+    this.afficherTout = !this.afficherTout;
+  }
 
   services = [
     {
@@ -251,7 +293,7 @@ export class Home implements AfterViewInit {
     { name: 'React Native', percentage: 70 },
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
-  
+
 
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
 

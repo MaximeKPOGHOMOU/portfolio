@@ -1,18 +1,35 @@
 .btn-projets-toggle {
-  padding: 12px 24px;
-  border: none;
+  display: inline-block;   /* ajuste la largeur au contenu */
+  padding: 10px 20px;
   border-radius: 30px;
-  background-color: #0d6efd;
-  color: white;
-  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
+  /* Pas de largeur fixée ici */
 }
 
-.btn-projets-toggle:hover {
-  background-color: #084298;
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+@media (min-width: 992px) {
+  .btn-projets-toggle {
+    border: 2px solid blue;
+    background-color: transparent;
+    color: blue;
+  }
+  .btn-projets-toggle:hover {
+    background-color: blue;
+    color: white;
+    transform: translateY(-3px);
+  }
 }
+
+@media (max-width: 991px) {
+  .btn-projets-toggle {
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+}
+
+.isotope-layout {
+  position: relative; /* créer un contexte de stacking */
+  z-index: 1;         /* z-index plus élevé que la section contact */
+}
+
