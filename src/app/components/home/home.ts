@@ -170,7 +170,6 @@ export class Home implements AfterViewInit {
     }
   ];
 
-
   educations = [
     {
       titre: 'Licence en Génie Informatique',
@@ -260,7 +259,7 @@ export class Home implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   toggleDescription(index: number, event: Event): void {
-    event.preventDefault(); // pour ne pas recharger la page
+    event.preventDefault();
     this.services[index].expanded = !this.services[index].expanded;
   }
 
