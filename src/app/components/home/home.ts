@@ -35,6 +35,15 @@ export class Home implements AfterViewInit {
       lienDetails: 'https://mamouedu.galyimmo.com/'
     },
     {
+      titre: 'Plateforme de gestion académique UDECOM',
+      image: 'assets/img/portfolio/udecom.png',
+      categorie: 'filter-development',
+      description: 'Système complet pour la gestion des étudiants, des professeurs et des programmes académiques.',
+      meta: 'Développement',
+      lightboxGallery: 'portfolio-gallery-development',
+      lienDetails: 'https://udecom.gn/'
+    },
+    {
       titre: 'Mini site personnel pour portfolio',
       image: 'assets/img/portfolio/self.png',
       categorie: 'filter-development',
@@ -223,8 +232,6 @@ export class Home implements AfterViewInit {
     }
   ];
 
-
-
   frontendSkills = [
     { name: 'HTML/CSS', percentage: 95 },
     { name: 'JavaScript', percentage: 88 },
@@ -250,7 +257,7 @@ export class Home implements AfterViewInit {
     { name: 'React Native', percentage: 70 },
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
-  
+
 
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
 
