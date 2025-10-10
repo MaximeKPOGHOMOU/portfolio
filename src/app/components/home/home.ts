@@ -164,7 +164,7 @@ export class Home implements AfterViewInit {
     {
       poste: 'Stagiaire Développeur Fullstack',
       entreprise: 'Magoe Technologie',
-      date: 'Juin - présent',
+      date: 'Juin - Septembre',
       description: 'Participation au développement d\'applications web, avec intégration d\'interfaces utilisateur et gestion de bases de données, dans un environnement agile et collaboratif.',
       achievements: [
         'Développement de fonctionnalités front-end en Angular',
