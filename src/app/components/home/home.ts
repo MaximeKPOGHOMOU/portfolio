@@ -146,6 +146,21 @@ export class Home implements AfterViewInit {
   ];
 
   experiences = [
+   {
+  poste: 'Responsable Informatique',
+  entreprise: 'SPI-GN (Sécurité Incendie Prévention Guinée)',
+  date: 'Octobre 2025 - Présent',
+  description: 'Participation au développement et à la mise en œuvre de solutions technologiques pour la sécurité, la surveillance et la logistique, incluant l’intégration de systèmes GPS et de plateformes de supervision.',
+  achievements: [
+    'Installation et configuration de caméras de surveillance et de systèmes de contrôle d’accès',
+    'Utilisation de la plateforme Wialon pour la supervision en temps réel des engins via GPS',
+    'Mise en place et gestion de solutions de suivi de flotte pour optimiser la logistique',
+    'Participation au développement d’outils internes pour la maintenance et le reporting technique'
+  ],
+  delay: 300
+}
+
+,
     {
       poste: 'Stagiaire Développeur Fullstack',
       entreprise: 'Magoe Technologie',
