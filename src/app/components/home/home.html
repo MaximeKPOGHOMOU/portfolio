@@ -352,36 +352,55 @@
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
       <div class="row">
-        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-          <div class="experience-section">
-            <div class="section-header">
-              <h2><i class="bi bi-briefcase"></i> Parcours Professionnel</h2>
-              <p class="section-subtitle">
-                De mes premières missions sur le terrain à mes stages en développement, chaque étape m’a permis de
-                renforcer mes compétences techniques et humaines.
-              </p>
-            </div>
+       <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+  <div class="experience-section">
+    <div class="section-header">
+      <h2><i class="bi bi-briefcase"></i> Parcours Professionnel</h2>
+      <p class="section-subtitle">
+        De mes premières missions sur le terrain à mes stages en développement, chaque étape m’a permis de
+        renforcer mes compétences techniques et humaines.
+      </p>
+    </div>
 
-            <div class="experience-cards">
-              <div class="experience-card" *ngFor="let exp of experiences" data-aos="zoom-in"
-                [attr.data-aos-delay]="exp.delay">
-                <div class="card-header">
-                  <div class="role-info">
-                    <h3>{{ exp.poste }}</h3>
-                    <h4>{{ exp.entreprise }}</h4>
-                  </div>
-                  <span class="duration">{{ exp.date }}</span>
-                </div>
-                <div class="card-body">
-                  <p>{{ exp.description }}</p>
-                  <ul class="achievements">
-                    <li *ngFor="let item of exp.achievements">{{ item }}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+    <div class="experience-cards">
+      <div class="experience-card"
+           *ngFor="let exp of experiences; let i = index"
+           data-aos="zoom-in"
+           [attr.data-aos-delay]="exp.delay">
+
+        <div class="card-header">
+          <div class="role-info">
+            <h3>{{ exp.poste }}</h3>
+            <h4>{{ exp.entreprise }}</h4>
+          </div>
+          <span class="duration">{{ exp.date }}</span>
+        </div>
+
+        <div class="card-body">
+          <!-- Description tronquée ou complète -->
+          <p>
+            {{ exp.expanded ? exp.description : (exp.description | slice:0:120) + '...' }}
+          </p>
+
+          <!-- Liste des réalisations (affichée seulement si expanded = true) -->
+          <ul class="achievements" *ngIf="exp.expanded">
+            <li *ngFor="let item of exp.achievements">{{ item }}</li>
+          </ul>
+
+          <!-- Bouton lire plus / lire moins -->
+          <div class="card-links">
+            <a href="#" class="link-item" (click)="toggleExperience(i, $event)">
+              {{ exp.expanded ? 'Lire moins' : 'Lire plus' }}
+              <i class="bi" [ngClass]="exp.expanded ? 'bi-arrow-up' : 'bi-arrow-down'"></i>
+            </a>
           </div>
         </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
         <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">

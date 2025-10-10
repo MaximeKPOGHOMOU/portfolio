@@ -157,7 +157,8 @@ export class Home implements AfterViewInit {
     'Mise en place et gestion de solutions de suivi de flotte pour optimiser la logistique',
     'Participation au développement d’outils internes pour la maintenance et le reporting technique'
   ],
-  delay: 300
+  delay: 300,
+   expanded: false
 }
 
 ,
@@ -171,7 +172,8 @@ export class Home implements AfterViewInit {
         'Intégration d\'API REST et gestion des requêtes côté back-end',
         'Collaboration avec des équipes techniques sur des projets clients réels'
       ],
-      delay: 300
+      delay: 300,
+       expanded: false
     },
     {
       poste: 'Stagiaire – Installation de systèmes de vidéosurveillance',
@@ -183,14 +185,16 @@ export class Home implements AfterViewInit {
         'Câblage, configuration DVR/NVR, et test de bon fonctionnement',
         'Intervention sur site avec rigueur et sens du service client'
       ],
-      delay: 400
+      delay: 400,
+       expanded: false
     },
     {
       poste: 'Agent Promoteur',
       entreprise: 'MTN Guinée',
       date: '2021 - 2025',
       description: 'Responsable de la promotion des produits et services MTN auprès des clients, en assurant la visibilité de la marque et en renforçant la relation client sur le terrain.',
-      delay: 500
+      delay: 500,
+       expanded: false
     }
   ];
 
@@ -284,6 +288,11 @@ export class Home implements AfterViewInit {
     event.preventDefault();
     this.services[index].expanded = !this.services[index].expanded;
   }
+  toggleExperience(index: number, event: Event): void {
+  event.preventDefault(); // Empêche le rechargement de la page
+  this.experiences[index].expanded = !this.experiences[index].expanded;
+}
+
 
 
   async ngAfterViewInit(): Promise<void> {
