@@ -150,12 +150,13 @@ export class Home implements AfterViewInit {
   poste: 'Responsable Informatique',
   entreprise: 'SPI-GN (Sécurité Incendie Prévention Guinée)',
   date: 'Oct 2025 - Présent',
-  description: 'Participation au développement et à la mise en œuvre de solutions technologiques pour la sécurité, la surveillance et la logistique, incluant l’intégration de systèmes GPS et de plateformes de supervision.',
+    description: 'Responsable de la gestion des systèmes informatiques, électroniques et de vidéosurveillance au sein de SPI-GN. Supervision de la logistique technique, participation à l’installation des dispositifs de sécurité (caméras, GPS, contrôle d’accès) et développement de solutions numériques pour la maintenance et le suivi des opérations.',
   achievements: [
     'Installation et configuration de caméras de surveillance et de systèmes de contrôle d’accès',
-    'Utilisation de la plateforme Wialon pour la supervision en temps réel des engins via GPS',
-    'Mise en place et gestion de solutions de suivi de flotte pour optimiser la logistique',
-    'Participation au développement d’outils internes pour la maintenance et le reporting technique'
+    'Mise en place de systèmes de tracking par GPS pour le suivi des véhicules et équipements',
+    'Gestion de la logistique et du déploiement des dispositifs électroniques sur les sites clients',
+    'Développement et supervision d’outils internes pour la maintenance et le reporting technique',
+    'Coordination entre les équipes techniques et informatiques pour garantir la fiabilité des systèmes'
   ],
   delay: 300,
    expanded: false
