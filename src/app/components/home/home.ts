@@ -149,7 +149,7 @@ export class Home implements AfterViewInit {
    {
   poste: 'Responsable Informatique',
   entreprise: 'SPI-GN (Sécurité Incendie Prévention Guinée)',
-  date: 'Octobre 2025 - Présent',
+  date: 'Oct 2025 - Présent',
   description: 'Participation au développement et à la mise en œuvre de solutions technologiques pour la sécurité, la surveillance et la logistique, incluant l’intégration de systèmes GPS et de plateformes de supervision.',
   achievements: [
     'Installation et configuration de caméras de surveillance et de systèmes de contrôle d’accès',
@@ -165,7 +165,7 @@ export class Home implements AfterViewInit {
     {
       poste: 'Stagiaire Développeur Fullstack',
       entreprise: 'Magoe Technologie',
-      date: 'Juin - Septembre',
+      date: 'Juin - Sept',
       description: 'Participation au développement d\'applications web, avec intégration d\'interfaces utilisateur et gestion de bases de données, dans un environnement agile et collaboratif.',
       achievements: [
         'Développement de fonctionnalités front-end en Angular',
