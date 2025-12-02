@@ -16,15 +16,15 @@ export class Home implements AfterViewInit {
 
 
   projets = [
-    {
-      titre: 'Application mobile e-learning',
-      image: 'assets/img/portfolio/ui_1.jpeg',
-      categorie: 'filter-ui',
-      description: 'Design intuitif et ergonomique pour des cours en ligne.',
-      meta: 'UI/UX Design',
-      lightboxGallery: 'portfolio-gallery-ui',
-      lienDetails: '#'
-    },
+ {
+  titre: 'Projet d’analyse de données SPI',
+  image: 'assets/img/portfolio/data.png',
+  categorie: 'filter-ui',
+  description: 'Analyse approfondie des indicateurs SPI avec visualisations interactives.',
+  meta: 'Data Analysis / BI',
+  lightboxGallery: 'portfolio-gallery-data',
+  lienDetails: '#'
+},
     {
       titre: 'Plateforme de centralisation de dossier scolaire',
       image: 'assets/img/portfolio/mamou.png',
@@ -80,14 +80,23 @@ export class Home implements AfterViewInit {
       lightboxGallery: 'portfolio-gallery-development',
       lienDetails: 'https://github.com/MaximeKPOGHOMOU/api-rest-pays-du-monde'
     },
+    {
+      titre: 'Installation GPS pour flotte',
+      image: 'assets/img/portfolio/capital.png',
+      categorie: 'filter-development',
+      description: 'Application mobile développée avec Flutter pour affichez les pays du monde en utilisant les api.',
+      meta: 'Développement Mobile',
+      lightboxGallery: 'portfolio-gallery-development',
+      lienDetails: 'https://github.com/MaximeKPOGHOMOU/api-rest-pays-du-monde'
+    },
 
 
     {
-      titre: 'Campagne réseaux sociaux',
-      image: 'assets/img/portfolio/marketing_1.jpeg',
+      titre: 'Installation des caméras de surveillance',
+      image: 'assets/img/portfolio/camera.png',
       categorie: 'filter-marketing',
-      description: 'Stratégie de communication digitale.',
-      meta: 'Marketing',
+      description: 'Installation des cameras de surveillance.',
+      meta: 'Installation',
       lightboxGallery: 'portfolio-gallery-marketing',
       lienDetails: '#'
     },
@@ -116,6 +125,13 @@ export class Home implements AfterViewInit {
       delay: 200
     },
     {
+      icon: 'bi bi-bar-chart-line',
+      title: 'Data Analyst',
+      description: 'Analyse des données pour fournir des insights précis et soutenir la prise de décision stratégique.',
+      delay: 600,
+      expanded: false
+    },
+    {
       icon: 'bi bi-shield-lock',
       title: 'Sécurité informatique',
       description: 'Mise en place de bonnes pratiques et solutions pour protéger vos données et garantir la confidentialité.',
@@ -135,34 +151,30 @@ export class Home implements AfterViewInit {
       description: 'Intervention rapide et efficace pour assurer le bon fonctionnement de vos systèmes informatiques et applications.',
       delay: 500,
       expanded: false
-    },
-    {
-      icon: 'bi bi-music-note-beamed',
-      title: 'Passion & Inspiration',
-      description: 'Un développeur inspiré par la musique, garantissant créativité et rigueur dans chaque projet.',
-      delay: 600,
-      expanded: false
     }
+
   ];
 
   experiences = [
-   {
-  poste: 'Responsable Informatique',
-  entreprise: 'SPI-GN (Sécurité Incendie Prévention Guinée)',
-  date: 'Oct 2025 - Présent',
-    description: 'Responsable de la gestion des systèmes informatiques, électroniques et de vidéosurveillance au sein de SPI-GN. Supervision de la logistique technique, participation à l’installation des dispositifs de sécurité (caméras, GPS, contrôle d’accès) et développement de solutions numériques pour la maintenance et le suivi des opérations.',
-  achievements: [
-    'Installation et configuration de caméras de surveillance et de systèmes de contrôle d’accès',
-    'Mise en place de systèmes de tracking par GPS pour le suivi des véhicules et équipements',
-    'Gestion de la logistique et du déploiement des dispositifs électroniques sur les sites clients',
-    'Développement et supervision d’outils internes pour la maintenance et le reporting technique',
-    'Coordination entre les équipes techniques et informatiques pour garantir la fiabilité des systèmes'
-  ],
-  delay: 300,
-   expanded: false
-}
+    {
+      poste: 'Responsable IT',
+      entreprise: 'SPI-GN (Sécurité Incendie Prévention Guinée)',
+      date: 'Oct 2025 - Présent',
+      description: 'Responsable de l’installation, de la configuration et de la maintenance des systèmes électroniques, de vidéosurveillance et de contrôle d’accès. Gestion de toute la logistique technique et coordination des interventions sur les sites clients.',
+      achievements: [
+        'Installation et paramétrage de caméras de surveillance et DVR/NVR',
+        'Déploiement et suivi de systèmes GPS pour la géolocalisation des véhicules et équipements',
+        'Mise en place et maintenance des dispositifs de contrôle d’accès',
+        'Mise en place d’un réseau d’impression opérationnel pour les postes de travail',
+        'Gestion de la logistique technique : matériel, planning et interventions terrain',
+        'Contrôle qualité et supervision des installations sur sites clients'
+      ],
+      delay: 300,
+      expanded: false
+    }
 
-,
+
+    ,
     {
       poste: 'Stagiaire Développeur Fullstack',
       entreprise: 'Magoe Technologie',
@@ -174,7 +186,7 @@ export class Home implements AfterViewInit {
         'Collaboration avec des équipes techniques sur des projets clients réels'
       ],
       delay: 300,
-       expanded: false
+      expanded: false
     },
     {
       poste: 'Stagiaire – Installation de systèmes de vidéosurveillance',
@@ -187,7 +199,7 @@ export class Home implements AfterViewInit {
         'Intervention sur site avec rigueur et sens du service client'
       ],
       delay: 400,
-       expanded: false
+      expanded: false
     },
     {
       poste: 'Agent Promoteur',
@@ -195,7 +207,7 @@ export class Home implements AfterViewInit {
       date: '2021 - 2025',
       description: 'Responsable de la promotion des produits et services MTN auprès des clients, en assurant la visibilité de la marque et en renforçant la relation client sur le terrain.',
       delay: 500,
-       expanded: false
+      expanded: false
     }
   ];
 
@@ -233,11 +245,12 @@ export class Home implements AfterViewInit {
 
   skills = [
     {
-      icon: 'bi bi-palette',
-      title: 'Conception UI/UX',
-      description: 'Création d’interfaces intuitives et esthétiques, centrées sur l’utilisateur.',
+      icon: 'bi bi-graph-up',
+      title: 'Data Analyse',
+      description: 'Analyse, traitement et visualisation des données pour extraire des insights utiles et faciliter la prise de décision.',
       delay: 400
-    },
+    }
+    ,
     {
       icon: 'bi bi-code-slash',
       title: 'Développement web et mobile',
@@ -277,6 +290,12 @@ export class Home implements AfterViewInit {
     { name: 'React Native', percentage: 70 },
     { name: 'Android (Java/Kotlin)', percentage: 65 },
   ];
+  dataAnalystSkills = [
+    { name: 'SQL', percentage: 85 },
+    { name: 'Excel & Power BI', percentage: 80 },
+    { name: 'Python pour l’analyse', percentage: 75 },
+  ];
+
 
 
   @ViewChildren('progressBar') progressBars!: QueryList<ElementRef<HTMLDivElement>>;
@@ -290,9 +309,9 @@ export class Home implements AfterViewInit {
     this.services[index].expanded = !this.services[index].expanded;
   }
   toggleExperience(index: number, event: Event): void {
-  event.preventDefault(); // Empêche le rechargement de la page
-  this.experiences[index].expanded = !this.experiences[index].expanded;
-}
+    event.preventDefault(); // Empêche le rechargement de la page
+    this.experiences[index].expanded = !this.experiences[index].expanded;
+  }
 
 
 
@@ -300,7 +319,7 @@ export class Home implements AfterViewInit {
 
     if (isPlatformBrowser(this.platformId)) {
       new Typed('.typed', {
-        strings: ['Designer', 'Developer', 'Freelancer', 'Artist'],
+        strings: ['Data analyst', 'Développeur', 'Technicien', 'Designer'],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true
