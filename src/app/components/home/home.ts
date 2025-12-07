@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID, ViewChildren, QueryList, ElementRef } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Contact } from '../contact/contact';
+import { expand } from 'rxjs';
 
 declare var PureCounter: any;
 declare var AOS: any;
@@ -16,15 +17,15 @@ export class Home implements AfterViewInit {
 
 
   projets = [
- {
-  titre: 'Projet d’analyse de données SPI',
-  image: 'assets/img/portfolio/data.png',
-  categorie: 'filter-ui',
-  description: 'Analyse approfondie des indicateurs SPI avec visualisations interactives.',
-  meta: 'Data Analysis / BI',
-  lightboxGallery: 'portfolio-gallery-data',
-  lienDetails: '#'
-},
+    {
+      titre: 'Projet d’analyse de données SPI',
+      image: 'assets/img/portfolio/data.png',
+      categorie: 'filter-ui',
+      description: 'Analyse approfondie des indicateurs SPI avec visualisations interactives.',
+      meta: 'Data Analysis / BI',
+      lightboxGallery: 'portfolio-gallery-data',
+      lienDetails: '#'
+    },
     {
       titre: 'Plateforme de centralisation de dossier scolaire',
       image: 'assets/img/portfolio/mamou.png',
@@ -101,6 +102,15 @@ export class Home implements AfterViewInit {
       lienDetails: '#'
     },
     {
+      titre: 'Installation de contrôle d’accès',
+      image: 'assets/img/portfolio/control.jpeg',
+      categorie: 'filter-marketing',
+      description: 'Installation, configuration et maintenance de systèmes de contrôle d’accès biométriques et par badges.',
+      meta: 'Sécurité & Accès',
+      lightboxGallery: 'portfolio-gallery-marketing',
+      lienDetails: '#'
+    },
+    {
       titre: 'Affiche publicitaire',
       image: 'assets/img/portfolio/affiche.jpg',
       categorie: 'filter-infographie',
@@ -119,17 +129,16 @@ export class Home implements AfterViewInit {
       delay: 100
     },
     {
-      icon: 'bi bi-camera-video',
-      title: 'Installation de systèmes de vidéosurveillance',
-      description: 'Configuration et maintenance de caméras IP et analogiques pour assurer la sécurité et la surveillance de vos locaux.',
-      delay: 200
+      icon: 'bi bi-shield-lock',
+      title: 'Sécurité & Gestion Connectée',
+      description: 'Intégration de vidéosurveillance, contrôle d’accès biométrique, pointeuse et suivi GPS avec supervision distante et maintenance complète.',
+      delay: 100
     },
     {
       icon: 'bi bi-bar-chart-line',
       title: 'Data Analyst',
       description: 'Analyse des données pour fournir des insights précis et soutenir la prise de décision stratégique.',
-      delay: 600,
-      expanded: false
+      delay: 100,
     },
     {
       icon: 'bi bi-shield-lock',
@@ -160,11 +169,11 @@ export class Home implements AfterViewInit {
       poste: 'Responsable IT',
       entreprise: 'SPI-GN (Sécurité Incendie Prévention Guinée)',
       date: 'Oct 2025 - Présent',
-      description: 'Responsable de l’installation, de la configuration et de la maintenance des systèmes électroniques, de vidéosurveillance et de contrôle d’accès. Gestion de toute la logistique technique et coordination des interventions sur les sites clients.',
+      description: 'Responsable de l’installation, de la configuration et de la maintenance des systèmes électroniques, de vidéosurveillance, de contrôle d’accès et de solutions de sécurité connectées.',
       achievements: [
+        'Installation, configuration et maintenance de systèmes de contrôle d’accès (badges, biométrie, pointeuse)',
         'Installation et paramétrage de caméras de surveillance et DVR/NVR',
         'Déploiement et suivi de systèmes GPS pour la géolocalisation des véhicules et équipements',
-        'Mise en place et maintenance des dispositifs de contrôle d’accès',
         'Mise en place d’un réseau d’impression opérationnel pour les postes de travail',
         'Gestion de la logistique technique : matériel, planning et interventions terrain',
         'Contrôle qualité et supervision des installations sur sites clients'
@@ -259,10 +268,11 @@ export class Home implements AfterViewInit {
     },
     {
       icon: 'bi bi-camera-video',
-      title: 'Installation de caméras de surveillance',
-      description: 'Installation, câblage et configuration de systèmes de vidéosurveillance.',
+      title: 'Sécurité électronique & contrôle d’accès',
+      description: 'Installation de vidéosurveillance, contrôle d’accès biométrique, badges RFID et supervision centralisée.',
       delay: 500
     }
+
   ];
 
   frontendSkills = [
