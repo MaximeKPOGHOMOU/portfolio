@@ -80,7 +80,6 @@ export class Contact implements OnInit {
         }
       })
       .catch((error) => {
-        console.error("Erreur réseau :", error);
         this.showToast("Échec de connexion. Vérifiez votre Internet.", 'error');
 
         // Force Angular à redétecter après changement
