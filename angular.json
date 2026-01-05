@@ -19,10 +19,10 @@
               "src/assets",
               "src/favicon.ico",
               {
-    "glob": "**/*",
-    "input": "src/assets/doc",
-    "output": "/assets/doc/"
-  }
+                "glob": "**/*",
+                "input": "src/assets/doc",
+                "output": "/assets/doc/"
+              }
             ],
             "styles": [
               "src/assets/vendor/bootstrap/css/bootstrap.min.css",
